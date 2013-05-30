@@ -8,7 +8,7 @@ require_once 'include/functions.php';
 $_SESSION['auth'] = _ws_auth_by_ip('172.16.*.*');
 $auth = $_SESSION['auth'];
 
-mysql_select_db('webshare', $_WS['SQL_CONNECT'][0]) or die('Could not select database.');
+mysql_select_db($_WS['SQL_DBNAME'][0], $_WS['SQL_CONNECT'][0]) or die('Could not select database.');
 
 if(preg_match($_WS['HASH_REGEX'], @$_GET['hash'])) :
 

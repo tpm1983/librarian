@@ -13,16 +13,17 @@ $_WS['PATH_FILES']=     $_WS['PATH'] . 'files/';
 $_WS['EXCL_EXT']=       array('.exe');
 $_WS['EXCL_FILES']=     array('.', '..', '.DS_Store', '.Thumbs');
 
+$_WS['SQL_DBNAME'][]=   'librarian';
 $_WS['SQL_CONNECT'][]=  mysql_connect(
 
 	 // HOST
-	'sql.server.foo',
+	'localhost',
 
 	// USER
-	'USERNAME',
+	'root',
 
 	 // PASSWORD
-	'PASS'
+	'xx1l3ff'
 );
 
 ?>

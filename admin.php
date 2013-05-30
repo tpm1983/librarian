@@ -5,7 +5,7 @@ session_start();
 require_once 'include/config.php';
 require_once 'include/functions.php';
 
-$_SESSION['auth'] = _ws_auth_by_ip('172.16.*.*');
+$_SESSION['auth'] = true;
 $auth = $_SESSION['auth'];
 
 if (!$auth) :
@@ -14,7 +14,7 @@ if (!$auth) :
 	exit;
 endif;
 
-mysql_select_db('webshare', $_WS['SQL_CONNECT'][0]) or die('Could not select database.');
+mysql_select_db($_WS['SQL_DBNAME'][0], $_WS['SQL_CONNECT'][0]) or die('Could not select database.');
 
 $query = "SELECT * FROM shares ORDER BY job_name ASC";
 $query = mysql_query($query);
@@ -134,7 +134,7 @@ while ($share = mysql_fetch_assoc($query)) {
 	</div>
 </div>
 
-<button style="float:right;margin-right:25px;" onclick='document.forms["create_sharepoint"].submit()'>Sharepoint anlegen</button>
+<button style="float:right;margin-right:25px;" onclick='document.forms["create_sharepoint"].submit()'>Create Sharepoint</button>
 
 <?if(@$_SESSION['action_return']):?>
 
