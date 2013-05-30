@@ -16,7 +16,7 @@ $_WS['EXCL_FILES']=     array('.', '..', '.DS_Store', '.Thumbs');
 $_WS['SQL_CONNECT'][]=  mysql_connect(
 
 	 // HOST
-	'sql.server',
+	'sql.server.foo',
 
 	// USER
 	'USERNAME',
