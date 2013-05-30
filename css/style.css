@@ -62,7 +62,7 @@ i, em {
 }
 
 #adminpanel,
-#list_view {
+.list_view {
 	margin: 20px 10px 0;
 	padding: 5px;
 	border: 1px solid rgb(206,206,206);
@@ -79,7 +79,7 @@ i, em {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
 }
 
-#list_view th {
+.list_view th {
 	font-weight: bold;
 	text-align: left;
 	border-bottom: 1px solid rgb(206,206,206);
@@ -87,38 +87,44 @@ i, em {
 	color: #20559A;
 }
 
-#list_view td {
+.list_view td {
 	padding: 3px 5px;
 }
 
-#list_view tr:hover td {
+.list_view tr:hover td {
 	background-color: #ccc;
 }
 
-#list_view td div,
-#list_view th div {
+#create_sharepoint tr:hover td {
+	background-color: inherit;
+}
+
+.list_view td div,
+.list_view th div {
 	float: left;
 	padding: 3px 8px;
 	border-radius: 5px;
 }
 
-	#list_view .name div a {
+	.list_view .name div a {
 		color: #333;
 		text-decoration: none;
 		font-weight: bold;
 		letter-spacing: 0.025em;
 	}
 
-#list_view .name a:hover {
+.list_view .name a:hover {
 	text-decoration: underline;
 }
 
-#list_view .type { width: 60px }
-#list_view .size { width: 80px }
-#list_view .date { width: 140px }
-#list_view .action { width: 140px }
+.list_view .type { width: 60px }
+.list_view .size { width: 80px }
+.list_view .date { width: 140px }
+.list_view .action { width: 140px }
 
-#list_view tr.odd {
+
+
+.list_view tr.odd {
 	background-color: #FEFEFE;
 }
 

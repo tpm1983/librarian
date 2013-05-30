@@ -40,7 +40,7 @@ while ($share = mysql_fetch_assoc($query)) {
 	<div id="base_wrapper_admin">
 
 		<?if(!empty($shares)):?>
-		<div class="view" id="list_view">
+		<div class="view list_view">
 			<table width="100%">
 				<tr class="header">
 					<th class="link">
@@ -89,12 +89,38 @@ while ($share = mysql_fetch_assoc($query)) {
 					</td>
 				</tr>
 			<?endforeach;?>
+			</table>
+		</div>
+		<?php else: ?>
+		<div class="view list_view" style="padding:20px;">
+			<p>
+				There are currently no sharepoints
+			</p>
+		</div>
+		<?php endif; ?>
+
+		<div class="view list_view" id="create_sharepoint">
+			<table width="100%">
+				<tr class="header">
+					<th class="job_no">
+						<div>
+							Job-/Projektnummer
+						</div>
+					</th>
+					<th class="job_name">
+						<div>
+							Job-/Projektname
+						</div>
+					</th>
+					<th class="admin">
+						<div>
+							E-Mail Adresse
+						</div>
+					</th>
+				</tr>
 				<form action="action.php" name="create_sharepoint" method="post">
 				<tr class="content">
-					<td class="link first-child">
-						<input type="hidden" name="action" value="create_sharepoint" />
-					</td>
-					<td class="job_no">
+					<td class="job_no first-child">
 						<div>
 							<input type="text" name="job_no" value="WA-" style="text-transform:uppercase;border-bottom:1px solid lightgray;" />
 						</div>
@@ -110,17 +136,10 @@ while ($share = mysql_fetch_assoc($query)) {
 						</div>
 					</td>
 				</tr>
+				<input type="hidden" name="action" value="create_sharepoint" />
 				</form>
 			</table>
 		</div>
-		<?php else: ?>
-		<div class="view" id="list_view" style="padding:20px;">
-			<p>
-				There are noooo sharepoints
-			</p>
-		</div>
-
-		<?php endif; ?>
 
 		<script type="text/javascript">
 		$(document).ready(function(){
