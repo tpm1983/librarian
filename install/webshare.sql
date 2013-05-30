@@ -21,7 +21,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `files`;
 CREATE TABLE `files` (
   `f_id` int(9) NOT NULL AUTO_INCREMENT,
-  `f_hash` char(6) NOT NULL,
+  `f_hash` char(40) NOT NULL,
   `s_id` int(9) DEFAULT NULL,
   `status` int(9) DEFAULT NULL,
   `label` int(1) DEFAULT '0',
@@ -42,7 +42,7 @@ CREATE TABLE `files` (
 DROP TABLE IF EXISTS `shares`;
 CREATE TABLE `shares` (
   `s_id` int(9) NOT NULL AUTO_INCREMENT,
-  `s_hash` char(6) NOT NULL DEFAULT '',
+  `s_hash` char(40) NOT NULL DEFAULT '',
   `job_no` char(14) DEFAULT NULL,
   `job_name` varchar(250) DEFAULT 'No Name given',
   `admin` varchar(250) DEFAULT NULL,

@@ -2,8 +2,7 @@
 
 function _ws_mkhash() {
 
-	$hash= md5(microtime());
-	$hash= substr($hash, 13, -13);
+	$hash= sha1(microtime() + rand(1,99999));
 	return $hash;
 }
 
