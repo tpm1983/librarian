@@ -5,7 +5,7 @@ session_start();
 require_once 'include/config.php';
 require_once 'include/functions.php';
 
-$_SESSION['auth'] = _ws_auth_by_ip('172.16.*.*');
+$_SESSION['auth'] = true;
 $auth = $_SESSION['auth'];
 
 if (!$auth) :
@@ -27,7 +27,7 @@ elseif($_GET):
 
 endif;
 
-mysql_select_db('webshare', $_WS['SQL_CONNECT'][0]) or die('Could not select database.');
+mysql_select_db($_WS['SQL_DBNAME'][0], $_WS['SQL_CONNECT'][0]) or die('Could not select database.');
 
 switch ($action[0]) {
 

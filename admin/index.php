@@ -69,7 +69,7 @@ while ($share = mysql_fetch_assoc($query)) {
 				<tr class="content">
 					<td class="link first-child">
 						<div style="font-family:courier new">
-							<a href="<?php echo $_WS['BASE_URI'] . $share['s_hash'] ?>" target="_blank"><?php echo $_WS['BASE_URI'] . $share['s_hash'] ?></a>
+							<a href="<?php echo $_WS['BASE_URI'] . '/' . $share['s_hash'] ?>" target="_blank"><?php echo $_WS['BASE_URI'] . '/' . $share['s_hash'] ?></a>
 						</div>
 					</td>
 					<td class="job_no">
@@ -104,12 +104,12 @@ while ($share = mysql_fetch_assoc($query)) {
 				<tr class="header">
 					<th class="job_no">
 						<div>
-							Job-/Projektnummer
+							Share-Name
 						</div>
 					</th>
 					<th class="job_name">
 						<div>
-							Job-/Projektname
+							Subline
 						</div>
 					</th>
 					<th class="admin">
@@ -122,7 +122,7 @@ while ($share = mysql_fetch_assoc($query)) {
 				<tr class="content">
 					<td class="job_no first-child">
 						<div>
-							<input type="text" name="job_no" value="WA-" style="text-transform:uppercase;border-bottom:1px solid lightgray;" />
+							<input type="text" name="job_no" value="" style="border-bottom:1px solid lightgray;" />
 						</div>
 					</td>
 					<td class="job_name">

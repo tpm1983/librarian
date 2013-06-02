@@ -90,13 +90,14 @@ function _ws_auth_by_ip($sheme = '192.168.*.*') {
 
 function _ws_preg_hash( $hash, $ewe= false ) {
 
-	$reg_ex= '/^[a-z0-9]{6}$/';
+	$reg_ex= '/^[a-z0-9]{40}$/';
 	return preg_match($reg_ex, $hash);
 }
 
 function _ws_preg_job_no( $job_no, $ewe= false ) {
 
-	$reg_ex= '/^WA-[A-Z0-9]{4}-[0-9]{2}-[0-9]{3}$/';
+	//$reg_ex= '/^WA-[A-Z0-9]{4}-[0-9]{2}-[0-9]{3}$/';
+	$reg_ex= '/^.{1,100}$/';
 	return preg_match($reg_ex, $job_no);
 }
 
