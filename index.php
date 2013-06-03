@@ -6,7 +6,6 @@ require_once 'setup.php';
 require_once 'includes/functions.php';
 
 
-
 if(preg_match($_WS['HASH_REGEX'], @$_GET['hash'])) :
 
 	$query = mysql_query("SELECT * FROM shares WHERE s_hash = '" . $_GET['hash'] . "'");
