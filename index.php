@@ -2,6 +2,8 @@
 
 session_start();
 
+// Comment habe was geändert!
+
 require_once 'setup.php';
 require_once 'includes/functions.php';
 
